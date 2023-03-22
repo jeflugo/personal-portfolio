@@ -39,7 +39,7 @@ export default function Contact() {
 					<h1 className='contact-title section-title'>Contact</h1>
 					<form
 						className='contact-form'
-						action='https://formsubmit.co/jefersoneduardoluego@gmail.com'
+						action='https://formspree.io/f/mayzdjjr'
 						method='POST'
 					>
 						<div className='form-group'>
@@ -68,7 +68,6 @@ export default function Contact() {
 								onChange={handleChange}
 							/>
 						</div>
-						<input type='hidden' name='_subject' value={formData.subject} />
 						<div className='form-group'>
 							<label htmlFor='message-field'>Message</label>
 							<textarea
