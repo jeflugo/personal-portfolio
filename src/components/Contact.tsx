@@ -41,7 +41,6 @@ export default function Contact() {
 						className='contact-form'
 						action='https://formsubmit.co/jefersoneduardoluego@gmail.com'
 						method='POST'
-						onSubmit={handleSubmit}
 					>
 						<div className='form-group'>
 							<label htmlFor='email-field'>Email</label>
