@@ -26,9 +26,6 @@ export default function Contact() {
 	const resetFormData = () => setFormData(currentFormData => initialFormData)
 
 	const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-		e.preventDefault()
-		console.log(e)
-
 		resetFormData()
 	}
 
@@ -41,6 +38,7 @@ export default function Contact() {
 						className='contact-form'
 						action='https://formspree.io/f/mayzdjjr'
 						method='POST'
+						onSubmit={handleSubmit}
 					>
 						<div className='form-group'>
 							<label htmlFor='email-field'>Email</label>
