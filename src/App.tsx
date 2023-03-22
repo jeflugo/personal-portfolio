@@ -1,29 +1,19 @@
 // *Styles
-// import 'bootstrap/dist/css/bootstrap.min.css'
-// import './App.scss'
+import './scss/App.scss'
 
-//* Assets
-import pictureImg from './assets/picture.png'
+// * Components
+import Header from './components/Header'
+import Goals from './components/Goals'
+import Proyects from './components/Proyects'
+import Contact from './components/Contact'
 
 export default function App() {
 	return (
 		<>
-			<header className=''>
-				<div className='container-md'>
-					<div className='header-wrapper '>
-						<div className='heading'>
-							<span className='nationality'>Venezuelan</span>
-							<h1 className=''>Jeferson Lugo</h1>
-							<p>
-								24yr old Web developer with a lot of passion, looking for
-								challenges.
-							</p>
-						</div>
-						<img src={pictureImg} />
-					</div>
-				</div>
-			</header>
-			<main></main>
+			<Header />
+			<Goals />
+			<Proyects />
+			<Contact />
 		</>
 	)
 }
