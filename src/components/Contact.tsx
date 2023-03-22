@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, useState } from 'react'
+import { ChangeEvent, FormEvent, useState, useEffect } from 'react'
 
 // Assets
 import githubImg from '../assets/github.png'
@@ -15,6 +15,10 @@ export default function Contact() {
 	const linkedIn = 'https://www.linkedin.com/in/jeferson-lugo/'
 	const github = 'https://github.com/jeflugo'
 
+	useEffect(() => {
+		resetFormData()
+	}, [])
+
 	const handleChange = (
 		e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
 	) => {
@@ -25,10 +29,6 @@ export default function Contact() {
 	}
 	const resetFormData = () => setFormData(currentFormData => initialFormData)
 
-	const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-		resetFormData()
-	}
-
 	return (
 		<section className='contact-section' id='contact-section'>
 			<div className='container'>
@@ -38,7 +38,6 @@ export default function Contact() {
 						className='contact-form'
 						action='https://formspree.io/f/mayzdjjr'
 						method='POST'
-						onSubmit={handleSubmit}
 					>
 						<div className='form-group'>
 							<label htmlFor='email-field'>Email</label>
